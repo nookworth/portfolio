@@ -1,22 +1,19 @@
 import {
   type IconType,
-  SiAstro,
-  SiBootstrap,
   SiCss3,
   SiDocker,
   SiHtml5,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
   SiNextdotjs,
-  SiNginx,
   SiNodedotjs,
-  SiPostgresql,
   SiReact,
-  SiRedis,
   SiRubyonrails,
-  SiSass,
   SiTailwindcss,
+  SiTypescript,
+  SiUnocss,
+  SiApollographql,
+  SiReactrouter,
+  SiElectron,
+  SiFirebase,
 } from '@icons-pack/react-simple-icons'
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
@@ -24,18 +21,17 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
     {
       field: 'Frontend',
       skills: [
-        { skill: 'html', icon: SiHtml5 },
-        { skill: 'css', icon: SiCss3 },
-        { skill: 'javascript', icon: SiJavascript },
+        { skill: 'html 5', icon: SiHtml5 },
+        { skill: 'css 3', icon: SiCss3 },
+        { skill: 'typescript', icon: SiTypescript },
+        { skill: 'electron', icon: SiElectron },
         { skill: 'react', icon: SiReact },
-        { skill: 'sass', icon: SiSass },
-        { skill: 'tailwind', icon: SiTailwindcss },
+        { skill: 'apollo graphql', icon: SiApollographql },
+        { skill: 'tailwindcss', icon: SiTailwindcss },
+        { skill: 'unocss', icon: SiUnocss },
         { skill: 'nextjs', icon: SiNextdotjs },
-        { skill: 'astro', icon: SiAstro },
-        {
-          skill: 'bootstrap',
-          icon: SiBootstrap,
-        },
+        { skill: 'react router', icon: SiReactrouter },
+        { skill: 'firebase', icon: SiFirebase },
       ],
     },
     {
@@ -48,26 +44,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         {
           skill: 'ruby on rails',
           icon: SiRubyonrails,
-        },
-        {
-          skill: 'redis',
-          icon: SiRedis,
-        },
-        {
-          skill: 'postgresql',
-          icon: SiPostgresql,
-        },
-        {
-          skill: 'mongodb',
-          icon: SiMongodb,
-        },
-        {
-          skill: 'mysql',
-          icon: SiMysql,
-        },
-        {
-          skill: 'nginx',
-          icon: SiNginx,
         },
         {
           skill: 'docker',
