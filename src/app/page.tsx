@@ -9,8 +9,10 @@ export default function Home() {
       <p className="mt-2 text-lg sm:text-xl">Software Engineer</p>
       <div className="mt-8 text-base sm:text-lg">
         <p>
-          Hi, my name is Christopher Morrison, frontend software engineer based
-          in Utah.
+          Hi, my name is Christopher Morrison, full-stack software engineer
+          based in Utah. I strive to build excellent user experiences from solid
+          foundations and some of my favorite technologies include React,
+          Node.js, and LangGraph.
         </p>
         <br />
       </div>

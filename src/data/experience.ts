@@ -6,28 +6,28 @@ const PAST_ROLES: {
   endDate: string
 }[] = [
   {
-    company: 'ACME Solutions',
-    role: 'CEO',
+    company: 'Travelpass Group',
+    role: 'Software Engineer',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'March 2023',
+      'Worked as a frontend engineer on travelpass.com from May 2023 to March 2025. Currently operating solo to architect and build an AI-powered support chatbot for Nitecrawler.com.',
+    startDate: 'May 2023',
     endDate: 'Now',
   },
   {
-    company: 'Google',
-    role: 'Software Engineer',
+    company: 'Utah Valley University',
+    role: 'Speech-to-text Transcriber',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'April 2021',
-    endDate: 'March 2023',
+      "Provided high-quality, accurate transcription services for college courses as a member of UVU's Office of Accessibility Services.",
+    startDate: 'April 2018',
+    endDate: 'May 2023',
   },
   {
-    company: 'Vercel',
-    role: 'Developer Advocate',
+    company: 'Morrison Piano Studio',
+    role: 'Piano Teacher & Owner',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam vel hic aspernatur molestiae exercitationem rerum reiciendis mollitia magnam harum ipsum?',
-    startDate: 'April 2021',
-    endDate: 'June 2018',
+      'Owned and operated a private piano studio for 12 years. Taught students of all ages and levels, organized recitals, and managed a private lesson schedule.',
+    startDate: 'October 2011',
+    endDate: 'May 2023',
   },
 ]
 

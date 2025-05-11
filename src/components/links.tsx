@@ -17,7 +17,7 @@ export default function Links() {
     },
     {
       icon: SiLinkedin,
-      href: 'https://www.linkedin.com/in/chris-morrison-9a185a22/',
+      href: 'https://www.linkedin.com/in/c-morr',
     },
   ]
 
