@@ -2,6 +2,7 @@
 
 import { Link } from 'next-view-transitions'
 import { usePathname } from 'next/navigation'
+import { ThemeSwitcher } from './theme-switcher'
 import clsx from 'clsx'
 
 export default function Nav() {
@@ -39,7 +40,7 @@ export default function Nav() {
             </Link>
           )
         })}
-        {/* <ThemeSwitcher /> */}
+        <ThemeSwitcher />
       </nav>
     </div>
   )

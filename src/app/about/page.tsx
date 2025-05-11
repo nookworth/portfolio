@@ -16,7 +16,6 @@ export default function About() {
       </div>
 
       <Skills />
-
       <Experience />
     </div>
   )
