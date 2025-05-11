@@ -2,36 +2,28 @@ const PROJECTS: {
   name: string
   description: string
   previewImage: string
-  repoUrl: string
-  liveLink: string
+  repoUrl?: string
+  liveLink?: string
 }[] = [
   {
-    name: 'Project 1',
-    description: 'Lorem ipsum dolor sit amet',
-    liveLink: 'https://google.com',
-    previewImage: '/project1.png',
-    repoUrl: 'https://github.com',
+    name: 'Travelpass.com Onboarding Flow',
+    description:
+      'Played a key role in developing the onboarding flow, particularly steps 2, 3, and 8',
+    liveLink: 'https://www.travelpass.com/onboarding',
+    previewImage: '/guides-showcase-portfolio.webp',
   },
   {
-    name: 'Project 2',
-    description: 'Lorem ipsum dolor sit amet',
-    liveLink: 'https://google.com',
-    previewImage: '/project2.png',
-    repoUrl: 'https://github.com',
+    name: 'TPG Developer Portal',
+    description:
+      'A command-line tool to streamline the code deployment process at Travelpass Group',
+    previewImage: 'portal.webp',
+    repoUrl: 'https://github.com/nookworth/dev-portal-v2-cli',
   },
   {
-    name: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet',
-    liveLink: 'https://google.com',
-    previewImage: '/project3.png',
-    repoUrl: 'https://github.com',
-  },
-  {
-    name: 'Project 4',
-    description: 'Lorem ipsum dolor sit amet',
-    liveLink: 'https://google.com',
-    previewImage: '/project4.png',
-    repoUrl: 'https://github.com',
+    name: 'HexType',
+    description: 'Speech-to-text transcription app for the AI era',
+    liveLink: 'https://imgur.com/a/transcribing-app-demo-e2lyLg3',
+    previewImage: 'tapp-hero-image.webp',
   },
 ]
 
