@@ -6,6 +6,13 @@ const PAST_ROLES: {
   endDate: string
 }[] = [
   {
+    company: 'Plaza Analytics',
+    role: 'Software Engineer',
+    description: "Full-stack software engineer working remotely and autonomously to provide complete software solutions.",
+    startDate: 'June 2025',
+    endDate: 'Now'
+  },
+  {
     company: 'Travelpass Group',
     role: 'Software Engineer',
     description:
