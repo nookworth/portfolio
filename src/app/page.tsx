@@ -2,7 +2,7 @@ import Links from '@/components/links'
 
 export default function Home() {
   return (
-    <div className="font-base">
+    <div className="font-base mx-auto max-w-[750px] w-full">
       <h1 className="font-heading text-2xl sm:text-4xl">
         Christopher Morrison
       </h1>

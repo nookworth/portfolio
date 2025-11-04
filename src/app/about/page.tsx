@@ -3,7 +3,7 @@ import Skills from '@/components/sections/skills'
 
 export default function About() {
   return (
-    <div className="font-base">
+    <div className="font-base mx-auto max-w-[750px] w-full">
       <h1 className="font-heading mb-8 text-2xl sm:text-4xl">About</h1>
 
       <div className="mb-10 text-base sm:text-lg">
