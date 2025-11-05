@@ -26,6 +26,7 @@ const ProjectDetailModal = ({
         <Button
           className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY w-full cursor-pointer border-2 px-4 py-2 text-center text-sm transition-all hover:shadow-none sm:text-base"
           onClick={() => setOpenModal(project.name)}
+          aria-label={`View details for ${project.name}`}
         >
           Details
         </Button>
@@ -39,47 +40,47 @@ const ProjectDetailModal = ({
         <DialogHeader>
           <DialogTitle>{project.name}</DialogTitle>
         </DialogHeader>
-        <div className="-mx-6 max-h-[750px] overflow-y-auto px-6 text-sm">
-          <h4 className="mb-4 text-lg leading-none font-medium">
+        <article className="-mx-6 max-h-[750px] overflow-y-auto px-6 text-sm">
+          <h2 className="mb-4 text-lg leading-none font-medium">
             Project Details
-          </h4>
+          </h2>
 
           <div className="space-y-4">
-            <div>
-              <h5 className="mb-1 font-semibold">Overview</h5>
+            <section aria-labelledby="overview-heading">
+              <h3 id="overview-heading" className="mb-1 font-semibold">Overview</h3>
               <p>{project.blurb}</p>
-            </div>
+            </section>
 
-            <div>
-              <h5 className="mb-1 font-semibold">Role</h5>
+            <section aria-labelledby="role-heading">
+              <h3 id="role-heading" className="mb-1 font-semibold">Role</h3>
               <p>{project.role}</p>
-            </div>
+            </section>
 
             {project.story && (
-              <div>
-                <h5 className="mb-1 font-semibold">Behind the Scenes</h5>
+              <section aria-labelledby="story-heading">
+                <h3 id="story-heading" className="mb-1 font-semibold">Behind the Scenes</h3>
                 <p>{project.story}</p>
-              </div>
+              </section>
             )}
 
-            <div>
-              <h5 className="mb-1 font-semibold">Tech Stack</h5>
-              <div className="flex flex-wrap gap-2">
+            <section aria-labelledby="stack-heading">
+              <h3 id="stack-heading" className="mb-1 font-semibold">Tech Stack</h3>
+              <ul className="flex flex-wrap gap-2" role="list">
                 {project.stack.map((tech) => (
-                  <span
+                  <li
                     key={tech}
                     className="bg-secondary-background border-border rounded-base border-2 px-2 py-1 text-xs"
                   >
                     {tech}
-                  </span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </section>
           </div>
-        </div>
+        </article>
         <DialogFooter>
           <DialogClose asChild>
-            <Button onClick={() => setOpenModal(null)}>Close</Button>
+            <Button onClick={() => setOpenModal(null)} aria-label="Close project details dialog">Close</Button>
           </DialogClose>
         </DialogFooter>
       </DialogContent>
