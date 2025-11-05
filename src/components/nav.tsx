@@ -24,17 +24,22 @@ export default function Nav() {
   ]
 
   return (
-    <div className="fixed top-5 left-0 z-50 w-full">
-      <nav className="text-main-foreground border-border shadow-shadow rounded-base bg-main font-base w450:gap-4 mx-auto flex w-max gap-5 border-2 p-2.5 px-5 text-sm sm:text-base">
+    <header className="fixed top-5 left-0 z-50 w-full">
+      <nav
+        aria-label="Main navigation"
+        className="text-main-foreground border-border shadow-shadow rounded-base bg-main font-base w450:gap-4 mx-auto flex w-max gap-5 border-2 p-2.5 px-5 text-sm sm:text-base"
+      >
         {links.map((link) => {
+          const isActive = path === link.path
           return (
             <Link
               key={link.path}
               className={clsx(
                 'hover:border-border rounded-base border-2 px-2 py-1 transition-colors',
-                path === link.path ? 'border-border' : 'border-transparent',
+                isActive ? 'border-border' : 'border-transparent',
               )}
               href={link.path}
+              aria-current={isActive ? 'page' : undefined}
             >
               {link.text}
             </Link>
@@ -42,6 +47,6 @@ export default function Nav() {
         })}
         <ThemeSwitcher />
       </nav>
-    </div>
+    </header>
   )
 }

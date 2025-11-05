@@ -22,9 +22,9 @@ export default function RootLayout({
         <body className={montserrat.className}>
           <ThemeProvider attribute="class" disableTransitionOnChange>
             <Nav />
-            <div className="text-foreground mx-auto max-w-full px-5 pt-28 pb-10">
+            <main className="text-foreground mx-auto max-w-full px-5 pt-28 pb-10">
               {children}
-            </div>
+            </main>
           </ThemeProvider>
         </body>
       </html>

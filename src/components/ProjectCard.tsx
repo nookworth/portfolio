@@ -6,7 +6,7 @@ import { useState } from 'react'
 const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => {
   const [openModal, setOpenModal] = useState<string | null>(null)
   return (
-    <div className="border-border shadow-shadow rounded-base bg-main space-y-2 border-2 p-4 sm:p-5">
+    <article className="border-border shadow-shadow rounded-base bg-main space-y-2 border-2 p-4 sm:p-5">
       <AspectRatio
         className="border-border shadow-shadow rounded-base -bottom-[2px]! h-fit max-h-full truncate border-2"
         ratio={71 / 26}
@@ -14,23 +14,23 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => {
         <img
           className="rounded-base w-full"
           src={`${project.previewImage}`}
-          alt={project.name}
+          alt={`Preview of ${project.name}`}
         />
       </AspectRatio>
 
-      <section className="text-main-foreground font-base min-h-21">
-        <p className="font-heading text-lg">{project.name}</p>
+      <header className="text-main-foreground font-base min-h-21">
+        <h3 className="font-heading text-lg">{project.name}</h3>
         <p>{project.blurb}</p>
-      </section>
+      </header>
 
-      <section className="mx-auto w-fit min-w-1/2">
+      <footer className="mx-auto w-fit min-w-1/2">
         <ProjectDetailModal
           open={openModal === project.name}
           project={project}
           setOpenModal={setOpenModal}
         />
-      </section>
-    </div>
+      </footer>
+    </article>
   )
 }
 
