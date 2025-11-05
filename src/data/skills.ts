@@ -14,6 +14,10 @@ import {
   SiReactrouter,
   SiElectron,
   SiFirebase,
+  SiPython,
+  SiFastapi,
+  SiExpress,
+  SiGooglecloud,
 } from '@icons-pack/react-simple-icons'
 
 const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
@@ -29,8 +33,6 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
         { skill: 'apollo graphql', icon: SiApollographql },
         { skill: 'tailwindcss', icon: SiTailwindcss },
         { skill: 'unocss', icon: SiUnocss },
-        { skill: 'nextjs', icon: SiNextdotjs },
-        { skill: 'react router', icon: SiReactrouter },
         { skill: 'firebase', icon: SiFirebase },
       ],
     },
@@ -38,12 +40,28 @@ const SKILLS: { field: string; skills: { skill: string; icon: IconType }[] }[] =
       field: 'Backend',
       skills: [
         {
-          skill: 'nodejs',
+          skill: 'node.js',
           icon: SiNodedotjs,
+        },
+        {
+          skill: 'express.js',
+          icon: SiExpress
+        },
+        {
+          skill: 'python',
+          icon: SiPython
+        },
+        {
+          skill: 'fastapi',
+          icon: SiFastapi
         },
         {
           skill: 'ruby on rails',
           icon: SiRubyonrails,
+        },
+        {
+          skill: 'google cloud',
+          icon: SiGooglecloud
         },
         {
           skill: 'docker',

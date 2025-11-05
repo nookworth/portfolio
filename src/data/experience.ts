@@ -10,7 +10,7 @@ const PAST_ROLES: {
     role: 'Software Engineer',
     description: "Full-stack software engineer working remotely and autonomously to provide complete software solutions.",
     startDate: 'June 2025',
-    endDate: 'Now'
+    endDate: 'August 2025'
   },
   {
     company: 'Travelpass Group',
@@ -18,7 +18,7 @@ const PAST_ROLES: {
     description:
       'Worked as a frontend engineer on travelpass.com from May 2023 to March 2025. Currently operating solo to architect and build an AI-powered support chatbot for Nitecrawler.com.',
     startDate: 'May 2023',
-    endDate: 'Now',
+    endDate: 'June 2025',
   },
   {
     company: 'Utah Valley University',
