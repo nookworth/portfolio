@@ -25,7 +25,7 @@ export default function Links() {
   ]
 
   return (
-    <nav aria-label="Social media links" className="mt-20 mr-auto flex w-full flex-wrap items-center gap-10">
+    <nav aria-label="Social media links" className="mt-20 pl-4 mr-auto flex w-full flex-wrap items-center gap-10">
       {links.map((link, id) => {
         return (
           <a

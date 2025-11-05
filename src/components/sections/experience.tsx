@@ -7,7 +7,7 @@ export default function Experience() {
 
       {PAST_ROLES.map((role, id) => {
         return (
-          <article className="mb-8" key={id}>
+          <article className="mb-8 pl-4" key={id}>
             <h3 className="text-lg font-heading sm:text-xl">
               {role.role} @ {role.company}
             </h3>

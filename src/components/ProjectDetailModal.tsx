@@ -39,7 +39,7 @@ const ProjectDetailModal = ({
       <DialogHeader>
         <DialogTitle>{project.name}</DialogTitle>
       </DialogHeader>
-      <article className="-mx-6 max-h-[750px] overflow-y-auto px-6 text-sm">
+      <article className="-mx-6 max-h-[600px] overflow-y-auto px-6 text-sm">
         <h2 className="mb-4 text-lg leading-none font-medium">
           Project Details
         </h2>

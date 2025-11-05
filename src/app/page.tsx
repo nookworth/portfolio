@@ -9,7 +9,7 @@ export default function Home() {
         </h1>
         <p className="mt-2 text-lg sm:text-xl">Software Engineer</p>
       </header>
-      <section aria-label="Introduction" className="mt-8 text-base sm:text-lg">
+      <section aria-label="Introduction" className="mt-8 pl-4 text-base sm:text-lg">
         <p>
           Hi, my name is Christopher Morrison, full-stack software engineer
           based in Utah. I strive to build excellent user experiences from solid
