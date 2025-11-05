@@ -3,21 +3,21 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog'
+import PROJECTS from '@/data/projects'
 import type { Dispatch, SetStateAction } from 'react'
 
 const ProjectDetailModal = ({
-  name,
   open,
+  project,
   setOpenModal,
 }: {
-  name: string
   open: boolean
+  project: (typeof PROJECTS)[number]
   setOpenModal: Dispatch<SetStateAction<string | null>>
 }) => {
   return (
@@ -25,36 +25,57 @@ const ProjectDetailModal = ({
       <DialogTrigger asChild>
         <Button
           className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY w-full cursor-pointer border-2 px-4 py-2 text-center text-sm transition-all hover:shadow-none sm:text-base"
-          onClick={() => setOpenModal(name)}
+          onClick={() => setOpenModal(project.name)}
         >
           Details
         </Button>
       </DialogTrigger>
       <DialogContent
-        className="sm:max-w-lg *:has-[svg]:hidden"
+        className="*:has-[svg]:hidden sm:max-w-lg"
         onEscapeKeyDown={() => setOpenModal(null)}
         onInteractOutside={() => setOpenModal(null)}
         onPointerDownOutside={() => setOpenModal(null)}
       >
         <DialogHeader>
-          <DialogTitle>{name}</DialogTitle>
-          {/* <DialogDescription>
-            This is a dialog with scrollable content.
-          </DialogDescription> */}
+          <DialogTitle>{project.name}</DialogTitle>
         </DialogHeader>
-        <div className="-mx-6 max-h-[500px] overflow-y-auto px-6 text-sm">
-          <h4 className="mb-4 text-lg leading-none font-medium">Lorem Ipsum</h4>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <p key={index} className="mb-4 leading-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          ))}
+        <div className="-mx-6 max-h-[750px] overflow-y-auto px-6 text-sm">
+          <h4 className="mb-4 text-lg leading-none font-medium">
+            Project Details
+          </h4>
+
+          <div className="space-y-4">
+            <div>
+              <h5 className="mb-1 font-semibold">Overview</h5>
+              <p>{project.blurb}</p>
+            </div>
+
+            <div>
+              <h5 className="mb-1 font-semibold">Role</h5>
+              <p>{project.role}</p>
+            </div>
+
+            {project.story && (
+              <div>
+                <h5 className="mb-1 font-semibold">Behind the Scenes</h5>
+                <p>{project.story}</p>
+              </div>
+            )}
+
+            <div>
+              <h5 className="mb-1 font-semibold">Tech Stack</h5>
+              <div className="flex flex-wrap gap-2">
+                {project.stack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-secondary-background border-border rounded-base border-2 px-2 py-1 text-xs"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
         <DialogFooter>
           <DialogClose asChild>

@@ -20,13 +20,13 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => {
 
       <div className="text-main-foreground font-base min-h-21">
         <p className="font-heading text-lg">{project.name}</p>
-        <p>{project.description}</p>
+        <p>{project.blurb}</p>
       </div>
 
       <div className="mx-auto w-fit min-w-1/2">
           <ProjectDetailModal
-            name={project.name}
             open={openModal === project.name}
+            project={project}
             setOpenModal={setOpenModal}
           />
         </div>
