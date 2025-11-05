@@ -20,7 +20,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html suppressHydrationWarning lang="en">
         <body className={montserrat.className}>
-          <ThemeProvider attribute="class" disableTransitionOnChange>
+          <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
             <Nav />
             <main className="text-foreground mx-auto max-w-full px-5 pt-28 pb-10">
               {children}
