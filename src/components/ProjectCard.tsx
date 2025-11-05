@@ -1,9 +1,12 @@
 import { AspectRatio } from '@radix-ui/react-aspect-ratio'
+import ProjectDetailModal from './ProjectDetailModal'
 import PROJECTS from '@/data/projects'
+import { useState } from 'react'
 
 const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => {
+  const [openModal, setOpenModal] = useState<string | null>(null)
   return (
-    <div className="border-border shadow-shadow rounded-base bg-main border-2 p-4 sm:p-5">
+    <div className="border-border shadow-shadow rounded-base bg-main border-2 p-4 space-y-2 sm:p-5">
       <AspectRatio
         className="border-border shadow-shadow rounded-base -bottom-[2px]! h-fit max-h-full truncate border-2"
         ratio={71 / 26}
@@ -15,32 +18,18 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => {
         />
       </AspectRatio>
 
-      <div className="text-main-foreground font-base mt-5">
+      <div className="text-main-foreground font-base min-h-21">
         <p className="font-heading text-lg">{project.name}</p>
-
-        <p className="mt-2">{project.description}</p>
-
-        <div className="mt-8 grid grid-cols-2 gap-5 has-[a:is(:only-child)]:grid-cols-1">
-          {project.liveLink && (
-            <a
-              className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY cursor-pointer border-2 px-4 py-2 text-center text-sm transition-all hover:shadow-none sm:text-base"
-              href={project.liveLink}
-              target="_blank"
-            >
-              Visit
-            </a>
-          )}
-          {project.repoUrl && (
-            <a
-              className="border-border bg-secondary-background text-foreground shadow-shadow rounded-base font-base hover:translate-x-boxShadowX hover:translate-y-boxShadowY cursor-pointer border-2 px-4 py-2 text-center text-sm transition-all hover:shadow-none sm:text-base"
-              href={project.repoUrl}
-              target="_blank"
-            >
-              Github
-            </a>
-          )}
-        </div>
+        <p>{project.description}</p>
       </div>
+
+      <div className="mx-auto w-fit min-w-1/2">
+          <ProjectDetailModal
+            name={project.name}
+            open={openModal === project.name}
+            setOpenModal={setOpenModal}
+          />
+        </div>
     </div>
   )
 }

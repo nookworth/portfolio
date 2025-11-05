@@ -6,18 +6,24 @@ const PROJECTS: {
   liveLink?: string
 }[] = [
   {
+    name: 'Real Estate Private Equity Dashboard',
+    description: 'Admin tool to manage REPE portfolio/client data',
+    previewImage: '',
+    liveLink: ''
+  },
+  {
+    name: 'Utah Gov AI',
+    description:
+      'Hackathon project with the goal of facilitating citizen engagement with Utah government bills',
+    previewImage: 'utah-gov-ai.webp',
+    repoUrl: 'https://github.com/nookworth/gov-ai-ui',
+  },
+  {
     name: 'Travelpass.com Onboarding Flow',
     description:
       'Played a key role in developing the onboarding flow, particularly steps 2, 3, and 8',
     liveLink: 'https://www.travelpass.com/onboarding',
     previewImage: '/guides-showcase-portfolio.webp',
-  },
-  {
-    name: 'TPG Developer Portal',
-    description:
-      'A command-line tool to streamline the code deployment process at Travelpass Group',
-    previewImage: 'portal.webp',
-    repoUrl: 'https://github.com/nookworth/dev-portal-v2-cli',
   },
   {
     name: 'HexType',
